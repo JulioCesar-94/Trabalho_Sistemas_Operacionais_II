@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <SYSTEM.H>
+#include <NUCLEO.H>
+
+/* Testar a implementação inicial do nucleo.c */
+
+void far processo1() {
+     int i = 0;
+     while (i < 5000) {
+           printf("Processo 1 -- %d\n", i);
+           i++;
+     }
+     termina_processo();
+}
+void far processo2() {
+     int i = 0;
+     while (i < 5000) {
+           printf("Processo 2 -- %d\n", i);
+           i++;
+     }
+     termina_processo();
+}
+
+void far processo3() {
+     int i = 0;
+     while (i < 5000) {
+           printf("Processo 3 -- %d\n", i);
+           i++;
+     }
+     termina_processo();
+}
+
+
+int main() {
+    cria_processo("P1", processo1);
+    cria_processo("P2", processo2);
+    cria_processo("P3", processo3);
+    dispara_sistema();
+    return 0;
+}
