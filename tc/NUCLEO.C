@@ -5,6 +5,19 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+/* Estruturas de dados para indicar a região crítica do DOS */
+typedef struct registros{
+        unsigned bx1, es1;
+}regis;
+
+typedef union k{
+        regis x;
+        char far *y;
+}APONTA_REG_CRIT;
+
+APONTA_REG_CRIT a; /* Variável global para indicar a região crítica do DOS */
+
 /* Definicao do BCP: DESCRITOR_PROC e PTR_DESC_PROC */
 
 typedef struct desc_p{
@@ -50,6 +63,7 @@ void far cria_processo(char nome_p[35], void far (*end_proc)()){
 /* Volta dos */
 void far volta_dos(){
         disable();
+        fflush(NULL);
         setvect(8,p_est->int_anterior);
         enable();
         exit(0);
@@ -72,13 +86,27 @@ void far escalador(){
         p_est->p_origem = d_esc;
         p_est->p_destino = PRIM->contexto;
         p_est->num_vetor = 8;
+
+        /* inicia ponteiro para R.C do DOS */
+        _AH = 0x34;
+        _AL = 0x00;
+        geninterrupt(0x21);
+        a.x.bx1 = _BX;
+        a.x.es1 = _ES;
+
         enable();
         while (1){
                 iotransfer();
                 disable();
-                PRIM = procura_prox_ativo();
-                if (PRIM == NULL) volta_dos();
-                p_est->p_destino = PRIM->contexto;
+
+                /* Verifica se o processo está na região crítica */
+
+                /* Se ele está na região crítica: o escalonador dá mais uma fatia de tempo para o processo atual, senão troca o contexto*/
+                if (!*a.y){
+                        PRIM = procura_prox_ativo();
+                        if (PRIM == NULL) volta_dos();
+                        p_est->p_destino = PRIM->contexto;
+                }
                 enable();
         }
 
