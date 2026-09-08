@@ -2,20 +2,22 @@
 #include <SYSTEM.H>
 #include <NUCLEO.H>
 
+FILE *arquivo;
+
 /* Testar a implementação inicial do nucleo.c */
 
 void far processo1() {
      int i = 0;
-     while (i < 5000) {
-           printf("Processo 1\n");
+     while (i < 500) {
+           fprintf(arquivo, "Processo 3\n", i);
            i++;
      }
      termina_processo();
 }
 void far processo2() {
      int i = 0;
-     while (i < 5000) {
-           printf("Processo 2\n");
+     while (i < 500) {
+           fprintf(arquivo, "Processo 2\n", i);
            i++;
      }
      termina_processo();
@@ -23,8 +25,8 @@ void far processo2() {
 
 void far processo3() {
      int i = 0;
-     while (i < 5000) {
-           printf("Processo 3\n");
+     while (i < 500) {
+           fprintf(arquivo, "Processo 3\n", i);
            i++;
      }
      termina_processo();
@@ -32,9 +34,14 @@ void far processo3() {
 
 
 int main() {
+    arquivo = fopen("TESTE1.txt", "w");
+    if (arquivo == NULL) return 0;
+
     cria_processo("P1", processo1);
     cria_processo("P2", processo2);
     cria_processo("P3", processo3);
     dispara_sistema();
+
+    printf("Arquivo TESTE1.txt gerado com sucesso\n");
     return 0;
 }
