@@ -11,29 +11,27 @@ semaforo mutex;
 semaforo vazio;
 semaforo cheio;
 
-int vetor[MAX];
-
-void producer(){
-    int item = 1;
+void far producer(){
+    fprintf("%d\n", vazio.s);
     while (1){
-        fprintf(arquivo, "Produziu item\n");
         P(&vazio);
         P(&mutex);
         fprintf(arquivo, "Depositou item\n");
-        V(&vazio);
+        fflush(arquivo);
         V(&mutex);
+        V(&cheio);
     }
 }
 
-void consumer(){
-    int item = 1;
+void far consumer(){
+    fprintf("%d\n", cheio.s);
     while (1){
         P(&cheio);
         P(&mutex);
         fprintf(arquivo, "Remove item\n");
+        fflush(arquivo);
         V(&mutex);
-        V(&cheio);
-        fprintf(arquivo, "Consome item\n");
+        V(&vazio);
     }
 }
 
@@ -48,8 +46,8 @@ int main(){
     inicializa_semaforo(&vazio, MAX);
     inicializa_semaforo(&cheio, 0);
 
-    cria_processo("Prod", producer);
     cria_processo("Cons", consumer);
+    cria_processo("Prod", producer);
     dispara_sistema();
 
     return 0;

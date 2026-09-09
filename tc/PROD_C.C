@@ -44,8 +44,8 @@ int main(){
     inicializa_semaforo(&vazio, MAX);
     inicializa_semaforo(&cheio, 0);
 
-    cria_processo("Prod", producer);
     cria_processo("Cons", consumer);
+    cria_processo("Prod", producer);
     dispara_sistema();
 
     return 0;

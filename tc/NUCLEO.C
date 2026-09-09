@@ -174,7 +174,10 @@ void far P(semaforo *sem){
                 PRIM->estado = bloq_p;
                 p_aux = PRIM;
                 PRIM = procura_prox_ativo();
-                if (PRIM == NULL) volta_dos();
+                if (PRIM == NULL) {
+                        printf("\nDEADLOCK DETECTADO\n");
+                        volta_dos();
+                }
                 transfer(p_aux->contexto, PRIM->contexto);
         }
 }
