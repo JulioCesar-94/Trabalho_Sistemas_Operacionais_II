@@ -84,12 +84,12 @@ void far volta_dos(){
 
 /* Procura o próximo processo ativo */
 PTR_DESC_PROC procura_prox_ativo(){
-        PTR_DESC_PROC p = PRIM;
+        PTR_DESC_PROC p = PRIM->prox_desc;
 
-        while (p->prox_desc != PRIM){
-                p = p->prox_desc;
+        do{
                 if (p->estado == ativo) return p;
-        }
+                p = p->prox_desc;
+        } while (p != PRIM->prox_desc);
 
         return NULL;
 }
@@ -171,13 +171,19 @@ void far P(semaforo *sem){
                         p->fila_sem = PRIM;
                 }
 
+                PRIM->fila_sem = NULL;
                 PRIM->estado = bloq_p;
+
                 p_aux = PRIM;
                 PRIM = procura_prox_ativo();
+
                 if (PRIM == NULL) {
+                        enable();
                         printf("\nDEADLOCK DETECTADO\n");
                         volta_dos();
                 }
+
+                enable();
                 transfer(p_aux->contexto, PRIM->contexto);
         }
 }
@@ -186,7 +192,9 @@ void far P(semaforo *sem){
 void far V(semaforo *sem){
         PTR_DESC_PROC p;
         disable();
-        if (sem->Q == NULL) sem->s++;
+        if (sem->Q == NULL) {
+                sem->s++;
+        }
         else{
                 sem->Q->estado = ativo;
                 p = sem->Q;

@@ -4,6 +4,7 @@
 #include <io.h>
 #include <fcntl.h>
 #define MAX 10
+#define TEST_SIZE 200
 
 int in = 0;
 int out = 0;
@@ -18,36 +19,43 @@ semaforo cheio;
 
 void far producer(){
     int item = 0;
-    while (1){
+    int i;
+    for(i = 0; i < TEST_SIZE; i++){
         item++;
 
         P(&vazio);
         P(&mutex);
 
         buffer[in] = item;
-        fprintf(arquivo, "Depositou item de valor %d no slot %d\n", item, in);
-        fflush(arquivo);
+        fprintf(arquivo, "Produtor depositou item de valor %d no slot %d\n", item, in);
         in = (in + 1) % MAX;
 
         V(&mutex);
         V(&cheio);
     }
+
+    fflush(arquivo);
+    termina_processo();
 }
 
 void far consumer(){
     int item;
-    while (1){
+    int i;
+    for(i = 0; i < TEST_SIZE; i++){
         P(&cheio);
         P(&mutex);
 
         item = buffer[out];
-        fprintf(arquivo, "Remove item %d do slot %d\n", item, out);
-        fflush(arquivo);
+        fprintf(arquivo, "Consumidor remove item %d do slot %d\n", item, out);
         out = (out + 1) % MAX;
-        
+
         V(&mutex);
         V(&vazio);
     }
+
+    fflush(arquivo);
+    fclose(arquivo);
+    termina_processo();
 }
 
 int main(){
