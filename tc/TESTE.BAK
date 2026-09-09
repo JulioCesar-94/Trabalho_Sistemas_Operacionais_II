@@ -2,6 +2,7 @@
 #include <SYSTEM.H>
 #include <NUCLEO.H>
 #include <io.h>
+#include <fcntl.h>
 
 int handle_log;
 
@@ -10,7 +11,7 @@ int handle_log;
 void far processo1() {
      int i = 0;
      while (i < 500) {
-           write(handle_log, "Processo 1\n", 10);
+           write(handle_log, "Processo 1\n", 11);
            i++;
      }
      termina_processo();
@@ -18,7 +19,7 @@ void far processo1() {
 void far processo2() {
      int i = 0;
      while (i < 500) {
-           write(handle_log, "Processo 2\n", 10);
+           write(handle_log, "Processo 2\n", 11);
            i++;
      }
      termina_processo();
@@ -27,15 +28,14 @@ void far processo2() {
 void far processo3() {
      int i = 0;
      while (i < 500) {
-           write(handle_log, "Processo 3\n", 10);
+           write(handle_log, "Processo 3\n", 11);
            i++;
      }
      termina_processo();
 }
 
-
 int main() {
-    handle_log = open("log.txt", O_WRONLY | O_CREAT | O_TRUNC);
+    handle_log = open("log_2.txt", O_WRONLY | O_CREAT | O_APPEND);
 
     cria_processo("P1", processo1);
     cria_processo("P2", processo2);
@@ -44,4 +44,5 @@ int main() {
 
     printf("Arquivo TESTE1.txt gerado com sucesso\n");
     return 0;
-}
+}
+

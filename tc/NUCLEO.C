@@ -18,12 +18,15 @@ typedef union k{
 
 APONTA_REG_CRIT a; /* Variável global para indicar a região crítica do DOS */
 
+/*------------------------------------------------------------------------------------------------*/
+
 /* Definicao do BCP: DESCRITOR_PROC e PTR_DESC_PROC */
 
 typedef struct desc_p{
         char nome[35];
-        enum {ativo, terminado} estado;
+        enum {ativo, bloq_p, terminado} estado;
         PTR_DESC contexto;
+        struct desc_p *fila_sem;
         struct desc_p *prox_desc;
 } DESCRITOR_PROC;
 
@@ -33,6 +36,16 @@ typedef DESCRITOR_PROC *PTR_DESC_PROC;
 PTR_DESC_PROC PRIM = NULL;
 PTR_DESC d_esc;
 
+/*------------------------------------------------------------------------------------------------*/
+
+/* Definicao do semaforo */
+typedef struct{
+        int s;
+        PTR_DESC_PROC Q;
+}semaforo;
+
+/*------------------------------------------------------------------------------------------------*/
+
 /* Função de criar processo */
 void far cria_processo(char nome_p[35], void far (*end_proc)()){
         /* Cria um descrior de processo (BCP) dinamicamente (malloc) atribui o ponteiro para p_aux*/
@@ -40,6 +53,7 @@ void far cria_processo(char nome_p[35], void far (*end_proc)()){
 
         strcpy(p_aux->nome, nome_p);
         p_aux->estado = ativo;
+        p_aux->fila_sem = NULL;
         p_aux->contexto = cria_desc();
         newprocess(end_proc, p_aux->contexto);
 
@@ -63,7 +77,6 @@ void far cria_processo(char nome_p[35], void far (*end_proc)()){
 /* Volta dos */
 void far volta_dos(){
         disable();
-        fflush(NULL);
         setvect(8,p_est->int_anterior);
         enable();
         exit(0);
@@ -94,7 +107,6 @@ void far escalador(){
         a.x.bx1 = _BX;
         a.x.es1 = _ES;
 
-        enable();
         while (1){
                 iotransfer();
                 disable();
@@ -102,7 +114,7 @@ void far escalador(){
                 /* Verifica se o processo está na região crítica */
 
                 /* Se ele está na região crítica: o escalonador dá mais uma fatia de tempo para o processo atual, senão troca o contexto*/
-                if (!*a.y){
+                if (*a.y == 0){
                         PRIM = procura_prox_ativo();
                         if (PRIM == NULL) volta_dos();
                         p_est->p_destino = PRIM->contexto;
@@ -127,6 +139,60 @@ void far termina_processo(){
         PRIM->estado = terminado;
         enable();
         while (1);
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/* Funcoes para o suporte a semaforos */
+void far inicializa_semaforo(semaforo *sem, int n){
+        sem->s = n;
+        sem->Q = NULL;
+}
+
+/* Primitiva P */
+void far P(semaforo *sem){
+        PTR_DESC_PROC p_aux;
+        disable();
+        if (sem->s > 0) {
+                sem->s--;
+                enable();
+        }
+        else{
+                if (sem->Q == NULL){
+                        sem->Q = PRIM;
+                }
+                else{
+                        PTR_DESC_PROC p;
+                        p = sem->Q;
+                        while (p->fila_sem){
+                                p = p->fila_sem;
+                        }
+
+                        p->fila_sem = PRIM;
+                }
+
+                PRIM->estado = bloq_p;
+                p_aux = PRIM;
+                PRIM = procura_prox_ativo();
+                if (PRIM == NULL) volta_dos();
+                transfer(p_aux->contexto, PRIM->contexto);
+        }
+}
+
+/* Primitiva V */
+void far V(semaforo *sem){
+        PTR_DESC_PROC p;
+        disable();
+        if (sem->Q == NULL) sem->s++;
+        else{
+                sem->Q->estado = ativo;
+                p = sem->Q;
+                sem->Q = sem->Q->fila_sem;
+
+                p->fila_sem = NULL;
+
+        }
+        enable();
 }
 
 

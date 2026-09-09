@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <SYSTEM.H>
+#include <NUCLEO.H>
+#include <io.h>
+#include <fcntl.h>
+#define MAX 100
+
+FILE *arquivo;
+
+semaforo mutex;
+semaforo vazio;
+semaforo cheio;
+
+void far producer(){
+    while (1){
+        P(&vazio);
+        P(&mutex);
+        fprintf(arquivo, "Depositou item\n");
+        fflush(arquivo);
+        V(&mutex);
+        V(&cheio);
+    }
+}
+
+void far consumer(){
+    while (1){
+        P(&cheio);
+        P(&mutex);
+        fprintf(arquivo, "Remove item\n");
+        fflush(arquivo);
+        V(&mutex);
+        V(&vazio);
+    }
+}
+
+int main(){
+    arquivo = fopen("Results.txt", "w");
+    if (arquivo == NULL){
+        printf("Erro em abrir o arquivo\n");
+        exit(1);
+    }
+
+    inicializa_semaforo(&mutex, 1);
+    inicializa_semaforo(&vazio, MAX);
+    inicializa_semaforo(&cheio, 0);
+
+    cria_processo("Prod", producer);
+    cria_processo("Cons", consumer);
+    dispara_sistema();
+
+    return 0;
+}
+
+

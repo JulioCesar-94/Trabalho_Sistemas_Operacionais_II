@@ -1,48 +1,32 @@
 #include <stdio.h>
 #include <SYSTEM.H>
 #include <NUCLEO.H>
-#include <io.h>
-#include <fcntl.h>
-
-int handle_log;
 
 /* Testar a implementação inicial do nucleo.c */
 
 void far processo1() {
      int i = 0;
-     while (i < 500) {
-           write(handle_log, "Processo 1\n", 11);
+     while (i < 10000) {
+           printf("Processo 1\n");
            i++;
      }
      termina_processo();
 }
 void far processo2() {
      int i = 0;
-     while (i < 500) {
-           write(handle_log, "Processo 2\n", 11);
+     while (i < 10000) {
+           printf("Processo 2\n");
            i++;
      }
      termina_processo();
 }
-
-void far processo3() {
-     int i = 0;
-     while (i < 500) {
-           write(handle_log, "Processo 3\n", 11);
-           i++;
-     }
-     termina_processo();
-}
-
 
 int main() {
-    handle_log = open("log.txt", O_WRONLY | O_CREAT | O_TRUNC);
-
     cria_processo("P1", processo1);
     cria_processo("P2", processo2);
-    cria_processo("P3", processo3);
     dispara_sistema();
 
-    printf("Arquivo TESTE1.txt gerado com sucesso\n");
     return 0;
-}
+}
+
+
