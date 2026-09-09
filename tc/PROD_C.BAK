@@ -12,7 +12,6 @@ semaforo vazio;
 semaforo cheio;
 
 void far producer(){
-    fprintf("%d\n", vazio.s);
     while (1){
         P(&vazio);
         P(&mutex);
@@ -24,7 +23,6 @@ void far producer(){
 }
 
 void far consumer(){
-    fprintf("%d\n", cheio.s);
     while (1){
         P(&cheio);
         P(&mutex);

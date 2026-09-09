@@ -3,7 +3,12 @@
 #include <NUCLEO.H>
 #include <io.h>
 #include <fcntl.h>
-#define MAX 100
+#define MAX 10
+
+int in = 0;
+int out = 0;
+
+int buffer[MAX];
 
 FILE *arquivo;
 
@@ -12,22 +17,34 @@ semaforo vazio;
 semaforo cheio;
 
 void far producer(){
+    int item = 0;
     while (1){
+        item++;
+
         P(&vazio);
         P(&mutex);
-        fprintf(arquivo, "Depositou item\n");
+
+        buffer[in] = item;
+        fprintf(arquivo, "Depositou item de valor %d no slot %d\n", item, in);
         fflush(arquivo);
+        in = (in + 1) % MAX;
+
         V(&mutex);
         V(&cheio);
     }
 }
 
 void far consumer(){
+    int item;
     while (1){
         P(&cheio);
         P(&mutex);
-        fprintf(arquivo, "Remove item\n");
+
+        item = buffer[out];
+        fprintf(arquivo, "Remove item %d do slot %d\n", item, out);
         fflush(arquivo);
+        out = (out + 1) % MAX;
+        
         V(&mutex);
         V(&vazio);
     }
