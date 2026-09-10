@@ -2,6 +2,8 @@
 #include <system.h>
 PTR_DESC dmain, dtic, dtac;
 
+/* Exercicio 2: Alternar, finitamente, a execucao entre duas corotinas por meio do transfer */
+
 void far tic(){
     int i = 0;
     while (i < 100){

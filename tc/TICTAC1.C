@@ -2,6 +2,8 @@
 #include <system.h>
 PTR_DESC dmain, dtic, dtac;
 
+/* Exercicio 1: Alternar a execucao entre duas co-rotinas, infinitamente, por meio do transfer */
+
 void far tic(){
      while (1){
            printf("tic-");

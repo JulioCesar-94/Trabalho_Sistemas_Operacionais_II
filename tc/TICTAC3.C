@@ -4,6 +4,9 @@
 #include <time.h>
 PTR_DESC dmain, dtic, dtac, d_escalonador;
 
+/* Exercicio 3: Alternar, infinitamente, a execucao entre duas co-rotinas utilizando escalonador */
+
+
 /* Variaveis globais que servem como parametros para o iotransfer() */
 
 /* Define a lista circular de nos */

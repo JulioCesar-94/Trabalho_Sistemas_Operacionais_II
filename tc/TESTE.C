@@ -2,7 +2,7 @@
 #include <SYSTEM.H>
 #include <NUCLEO.H>
 
-/* Testar a implementação inicial do nucleo.c */
+/* Um programa simples para testar a implementacao da troca de processos do nucleo.c */
 
 void far processo1() {
      int i = 0;
