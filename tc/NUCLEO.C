@@ -8,15 +8,15 @@
 
 /* Estruturas de dados para indicar a regiao critica do DOS */
 typedef struct registros{
-        unsigned bx1, es1;
+        unsigned bx1, es1; /* Campos dos registradores BX e ES */
 }regis;
 
 typedef union k{
-        regis x;
-        char far *y;
+        regis x;        /* Valor dos registradores */
+        char far *y;    /* Ponteiro para a regiao critica do DOS */
 }APONTA_REG_CRIT;
 
-APONTA_REG_CRIT a; /* Variavel global para indicar a regiao crítica do DOS */
+APONTA_REG_CRIT a; /* Variavel global para indicar a regiao critica do DOS */
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -40,8 +40,8 @@ PTR_DESC d_esc;
 
 /* Definicao do semaforo */
 typedef struct{
-        int s;
-        PTR_DESC_PROC Q;
+        int s;                  /* Parte inteira do semaforo, que sinaliza o numero de instancias de recursos ou processos que podem estar numa mesma regiao critica */
+        PTR_DESC_PROC Q;        /* Fila de processos bloqueados associado ao semaforo */
 }semaforo;
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -49,13 +49,13 @@ typedef struct{
 /* Função de criar processo */
 void far cria_processo(char nome_p[35], void far (*end_proc)()){
         /* Cria um descrior de processo (BCP) dinamicamente (malloc) atribui o ponteiro para p_aux*/
-        PTR_DESC_PROC p_aux = (PTR_DESC_PROC) malloc(sizeof(DESCRITOR_PROC));
+        PTR_DESC_PROC p_aux = (PTR_DESC_PROC) malloc(sizeof(DESCRITOR_PROC)); /* Aloca um espaco de memoria para esse descritor de processo */
 
-        strcpy(p_aux->nome, nome_p);            
+        strcpy(p_aux->nome, nome_p);            /* Atribui o parametro nome_p ao campo nome do processo*/
         p_aux->estado = ativo;                  /* Inicializa o estado para ativo */
         p_aux->fila_sem = NULL;                 /* Inicializa a fila do semaforo como NULL */
         p_aux->contexto = cria_desc();          /* Inicializa o contexto do processo */
-        newprocess(end_proc, p_aux->contexto); 
+        newprocess(end_proc, p_aux->contexto);  /* Inicia a estrutura de contexto da co-rotina*/
 
         /* Insere o descritor de processo no final da lista circular apontado por PRIM 
         Insere o BCP na fila dos processos prontos */
@@ -81,9 +81,9 @@ void far cria_processo(char nome_p[35], void far (*end_proc)()){
 /* Volta dos */
 /* Apos o termino de todos os processos ou de um possivel deadlock, o nucleo passa o controle para o DOS */
 void far volta_dos(){
-        disable();
-        setvect(8,p_est->int_anterior);
-        enable();
+        disable();                      /* Desabilita as interrupcoes */
+        setvect(8,p_est->int_anterior); /* Restabelece a rotina de interrucao do timer para o vetor de interrupcoes */
+        enable();                       /* Habilita as interrucoes */
         exit(0);
 }
 
@@ -104,9 +104,9 @@ PTR_DESC_PROC procura_prox_ativo(){
 /* Escalonador */
 /* Despacha o processo para a execução*/
 void far escalador(){
-        p_est->p_origem = d_esc;
-        p_est->p_destino = PRIM->contexto;
-        p_est->num_vetor = 8;
+        p_est->p_origem = d_esc;                /* A co-rotina chamadora eh a co-rotina do escalonador */
+        p_est->p_destino = PRIM->contexto;      /* A co-rotina chamada pelo escalonador eh o contexto PRIM (primeiro BCP da lista) */
+        p_est->num_vetor = 8;                   /* Associa o numero 8 do vetor de interrupcao (interrupcao do timer) a co-rotina do escalonador*/
 
         /* inicia ponteiro para R.C do DOS */
         _AH = 0x34;
@@ -123,8 +123,8 @@ void far escalador(){
                 /* Se ele esta na região crítica: o escalonador da mais uma fatia de tempo para o processo atual, senao troca o contexto*/
                 if (*a.y == 0){
                         PRIM = procura_prox_ativo();
-                        if (PRIM == NULL) volta_dos();
-                        p_est->p_destino = PRIM->contexto;
+                        if (PRIM == NULL) volta_dos();          
+                        p_est->p_destino = PRIM->contexto; /* Atualiza o campo destino */
                 }
                 enable();
         }
@@ -134,20 +134,20 @@ void far escalador(){
 /* Disparar o sistema */
 /* O controle do DOS eh passado para o escalonador que ira despachar os processos */
 void far dispara_sistema(){
-        PTR_DESC d_aux;
-        d_esc = cria_desc();
-        d_aux = cria_desc();
-        newprocess(escalador, d_esc);
-        transfer(d_aux, d_esc);
+        PTR_DESC d_aux;                 
+        d_esc = cria_desc();            /* Cria o contexto da co-rotina do escalonador */
+        d_aux = cria_desc();            /* Cria um contexto auxiliar para transferir a execucao por meio do transfer */
+        newprocess(escalador, d_esc);   /* Cria o descritor do contexto do escalonador */
+        transfer(d_aux, d_esc);         /* Tranfere o contexto atual para o escalonador */
 }
 
 /* Termina processo */
 /* O processo chega ao fim de sua execucao */
 void far termina_processo(){
-        disable();
-        PRIM->estado = terminado;
-        enable();
-        while (1);
+        disable();                /* Desabilita interrupcoes */
+        PRIM->estado = terminado; /* Muda o estado do processo para terminado */
+        enable();                 /* Habilita as interrupcoes */
+        while (1);                /* Loop eterno sem comandos para gastar a fatia de tempo final */
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -156,8 +156,8 @@ void far termina_processo(){
 
 /* Inicializar o semaforo com algum valor e inicializar a fila Q com NULL */
 void far inicializa_semaforo(semaforo *sem, int n){
-        sem->s = n;
-        sem->Q = NULL;
+        sem->s = n;     /* Inicializa a variavel com o total de recursos */
+        sem->Q = NULL;  /* Inicializa a fila de processos bloqueados */
 }
 
 /* Primitiva P */
@@ -221,7 +221,6 @@ void far V(semaforo *sem){
                 sem->Q->estado = ativo;
                 p = sem->Q;
                 sem->Q = sem->Q->fila_sem;
-
                 p->fila_sem = NULL;
 
         }

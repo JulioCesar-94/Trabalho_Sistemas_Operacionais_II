@@ -36,6 +36,7 @@ void far producer(){
         P(&vazio);  /* Chama a primitiva P(&vazio) para verificar se tem slots vazios no buffer */
         P(&mutex);  /* Chama P(&mutex) para indicar o inicio da regiao critica e impedir que outros processos acessem o buffer ao mesmo tempo */
 
+        /* Escritra de um valor no buffer */
         buffer[in] = item;
         fprintf(arquivo, "Produtor depositou item de valor %d no slot %d\n", item, in);
         in = (in + 1) % MAX;
@@ -56,6 +57,7 @@ void far consumer(){
         P(&cheio);  /* Chama P(&cheio) para verificar se ha algum item para retirar no buffer */
         P(&mutex);  /* Chama P(&mutex) para indicar o inicio da regiao critica e impedir que outros processos acessem o buffer ao mesmo tempo*/
 
+        /* Retira um valor do buffer */
         item = buffer[out];
         fprintf(arquivo, "Consumidor remove item %d do slot %d\n", item, out);
         out = (out + 1) % MAX;
@@ -65,7 +67,6 @@ void far consumer(){
     }
 
     fflush(arquivo);
-    fclose(arquivo);
     termina_processo();
 }
 
