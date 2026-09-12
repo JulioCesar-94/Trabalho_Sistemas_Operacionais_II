@@ -31,7 +31,7 @@ void far producer(){
     int item = 0;
     int i;
     for(i = 0; i < TEST_SIZE; i++){
-        item++;
+        item++;     /* Produz o item */
 
         P(&vazio);  /* Chama a primitiva P(&vazio) para verificar se tem slots vazios no buffer */
         P(&mutex);  /* Chama P(&mutex) para indicar o inicio da regiao critica e impedir que outros processos acessem o buffer ao mesmo tempo */
@@ -39,7 +39,7 @@ void far producer(){
         /* Escritra de um valor no buffer */
         buffer[in] = item;
         fprintf(arquivo, "Produtor depositou item de valor %d no slot %d\n", item, in);
-        in = (in + 1) % MAX;
+        in = (in + 1) % MAX;    /* Avança o ponteiro para o proximo slot vazio (o modulo eh utilizado para garantir a caracteristica circular do buffer) */
 
         V(&mutex);  /* Chama V(&mutex) para indicar a saida da regiao critica e outro processo pode entrar na regiao critica */
         V(&cheio);  /* Chama V(&cheio) para desbloqueiar o consumidor para retirar o item do buffer */
@@ -60,7 +60,7 @@ void far consumer(){
         /* Retira um valor do buffer */
         item = buffer[out];
         fprintf(arquivo, "Consumidor remove item %d do slot %d\n", item, out);
-        out = (out + 1) % MAX;
+        out = (out + 1) % MAX;  /* Avança o ponteiro para o proximo slot cheio */
 
         V(&mutex);  /* Chama V(&mutex) para indicar a saida da regiao critica e outro processo pode entrar na regiao critica */
         V(&vazio);  /* Chama V(&vazio) para desbloqueiar o produtor, indicando que ha uma celula livre para um item */

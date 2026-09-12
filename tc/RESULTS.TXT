@@ -1,400 +1,400 @@
 Produtor depositou item de valor 1 no slot 0
 Produtor depositou item de valor 2 no slot 1
-Consumidor remove item 1 do slot 0
 Produtor depositou item de valor 3 no slot 2
-Consumidor remove item 2 do slot 1
 Produtor depositou item de valor 4 no slot 3
-Consumidor remove item 3 do slot 2
 Produtor depositou item de valor 5 no slot 4
-Consumidor remove item 4 do slot 3
 Produtor depositou item de valor 6 no slot 5
-Consumidor remove item 5 do slot 4
 Produtor depositou item de valor 7 no slot 6
-Consumidor remove item 6 do slot 5
 Produtor depositou item de valor 8 no slot 7
-Consumidor remove item 7 do slot 6
 Produtor depositou item de valor 9 no slot 8
-Consumidor remove item 8 do slot 7
 Produtor depositou item de valor 10 no slot 9
+Consumidor remove item 1 do slot 0
+Consumidor remove item 2 do slot 1
+Consumidor remove item 3 do slot 2
+Consumidor remove item 4 do slot 3
+Consumidor remove item 5 do slot 4
+Consumidor remove item 6 do slot 5
+Consumidor remove item 7 do slot 6
+Consumidor remove item 8 do slot 7
 Consumidor remove item 9 do slot 8
-Produtor depositou item de valor 11 no slot 0
 Consumidor remove item 10 do slot 9
+Produtor depositou item de valor 11 no slot 0
 Produtor depositou item de valor 12 no slot 1
-Consumidor remove item 11 do slot 0
 Produtor depositou item de valor 13 no slot 2
-Consumidor remove item 12 do slot 1
 Produtor depositou item de valor 14 no slot 3
-Consumidor remove item 13 do slot 2
 Produtor depositou item de valor 15 no slot 4
-Consumidor remove item 14 do slot 3
 Produtor depositou item de valor 16 no slot 5
-Consumidor remove item 15 do slot 4
 Produtor depositou item de valor 17 no slot 6
-Consumidor remove item 16 do slot 5
 Produtor depositou item de valor 18 no slot 7
-Consumidor remove item 17 do slot 6
 Produtor depositou item de valor 19 no slot 8
-Consumidor remove item 18 do slot 7
 Produtor depositou item de valor 20 no slot 9
+Consumidor remove item 11 do slot 0
+Consumidor remove item 12 do slot 1
+Consumidor remove item 13 do slot 2
+Consumidor remove item 14 do slot 3
+Consumidor remove item 15 do slot 4
+Consumidor remove item 16 do slot 5
+Consumidor remove item 17 do slot 6
+Consumidor remove item 18 do slot 7
 Consumidor remove item 19 do slot 8
-Produtor depositou item de valor 21 no slot 0
 Consumidor remove item 20 do slot 9
+Produtor depositou item de valor 21 no slot 0
 Produtor depositou item de valor 22 no slot 1
-Consumidor remove item 21 do slot 0
 Produtor depositou item de valor 23 no slot 2
-Consumidor remove item 22 do slot 1
 Produtor depositou item de valor 24 no slot 3
-Consumidor remove item 23 do slot 2
 Produtor depositou item de valor 25 no slot 4
-Consumidor remove item 24 do slot 3
 Produtor depositou item de valor 26 no slot 5
-Consumidor remove item 25 do slot 4
 Produtor depositou item de valor 27 no slot 6
-Consumidor remove item 26 do slot 5
 Produtor depositou item de valor 28 no slot 7
-Consumidor remove item 27 do slot 6
 Produtor depositou item de valor 29 no slot 8
-Consumidor remove item 28 do slot 7
 Produtor depositou item de valor 30 no slot 9
+Consumidor remove item 21 do slot 0
+Consumidor remove item 22 do slot 1
+Consumidor remove item 23 do slot 2
+Consumidor remove item 24 do slot 3
+Consumidor remove item 25 do slot 4
+Consumidor remove item 26 do slot 5
+Consumidor remove item 27 do slot 6
+Consumidor remove item 28 do slot 7
 Consumidor remove item 29 do slot 8
-Produtor depositou item de valor 31 no slot 0
 Consumidor remove item 30 do slot 9
+Produtor depositou item de valor 31 no slot 0
 Produtor depositou item de valor 32 no slot 1
-Consumidor remove item 31 do slot 0
 Produtor depositou item de valor 33 no slot 2
-Consumidor remove item 32 do slot 1
 Produtor depositou item de valor 34 no slot 3
-Consumidor remove item 33 do slot 2
 Produtor depositou item de valor 35 no slot 4
-Consumidor remove item 34 do slot 3
 Produtor depositou item de valor 36 no slot 5
-Consumidor remove item 35 do slot 4
 Produtor depositou item de valor 37 no slot 6
-Consumidor remove item 36 do slot 5
+Consumidor remove item 31 do slot 0
 Produtor depositou item de valor 38 no slot 7
-Consumidor remove item 37 do slot 6
+Consumidor remove item 32 do slot 1
 Produtor depositou item de valor 39 no slot 8
-Consumidor remove item 38 do slot 7
+Consumidor remove item 33 do slot 2
 Produtor depositou item de valor 40 no slot 9
-Consumidor remove item 39 do slot 8
+Consumidor remove item 34 do slot 3
 Produtor depositou item de valor 41 no slot 0
-Consumidor remove item 40 do slot 9
+Consumidor remove item 35 do slot 4
 Produtor depositou item de valor 42 no slot 1
-Consumidor remove item 41 do slot 0
+Consumidor remove item 36 do slot 5
 Produtor depositou item de valor 43 no slot 2
-Consumidor remove item 42 do slot 1
+Consumidor remove item 37 do slot 6
 Produtor depositou item de valor 44 no slot 3
-Consumidor remove item 43 do slot 2
+Consumidor remove item 38 do slot 7
 Produtor depositou item de valor 45 no slot 4
-Consumidor remove item 44 do slot 3
+Consumidor remove item 39 do slot 8
 Produtor depositou item de valor 46 no slot 5
-Consumidor remove item 45 do slot 4
+Consumidor remove item 40 do slot 9
 Produtor depositou item de valor 47 no slot 6
-Consumidor remove item 46 do slot 5
+Consumidor remove item 41 do slot 0
 Produtor depositou item de valor 48 no slot 7
-Consumidor remove item 47 do slot 6
+Consumidor remove item 42 do slot 1
 Produtor depositou item de valor 49 no slot 8
-Consumidor remove item 48 do slot 7
+Consumidor remove item 43 do slot 2
 Produtor depositou item de valor 50 no slot 9
-Consumidor remove item 49 do slot 8
+Consumidor remove item 44 do slot 3
 Produtor depositou item de valor 51 no slot 0
-Consumidor remove item 50 do slot 9
+Consumidor remove item 45 do slot 4
 Produtor depositou item de valor 52 no slot 1
-Consumidor remove item 51 do slot 0
+Consumidor remove item 46 do slot 5
 Produtor depositou item de valor 53 no slot 2
-Consumidor remove item 52 do slot 1
+Consumidor remove item 47 do slot 6
 Produtor depositou item de valor 54 no slot 3
-Consumidor remove item 53 do slot 2
+Consumidor remove item 48 do slot 7
 Produtor depositou item de valor 55 no slot 4
-Consumidor remove item 54 do slot 3
+Consumidor remove item 49 do slot 8
 Produtor depositou item de valor 56 no slot 5
-Consumidor remove item 55 do slot 4
+Consumidor remove item 50 do slot 9
 Produtor depositou item de valor 57 no slot 6
-Consumidor remove item 56 do slot 5
+Consumidor remove item 51 do slot 0
 Produtor depositou item de valor 58 no slot 7
-Consumidor remove item 57 do slot 6
+Consumidor remove item 52 do slot 1
 Produtor depositou item de valor 59 no slot 8
-Consumidor remove item 58 do slot 7
+Consumidor remove item 53 do slot 2
 Produtor depositou item de valor 60 no slot 9
-Consumidor remove item 59 do slot 8
+Consumidor remove item 54 do slot 3
 Produtor depositou item de valor 61 no slot 0
-Consumidor remove item 60 do slot 9
+Consumidor remove item 55 do slot 4
 Produtor depositou item de valor 62 no slot 1
-Consumidor remove item 61 do slot 0
+Consumidor remove item 56 do slot 5
 Produtor depositou item de valor 63 no slot 2
-Consumidor remove item 62 do slot 1
+Consumidor remove item 57 do slot 6
 Produtor depositou item de valor 64 no slot 3
-Consumidor remove item 63 do slot 2
+Consumidor remove item 58 do slot 7
 Produtor depositou item de valor 65 no slot 4
-Consumidor remove item 64 do slot 3
+Consumidor remove item 59 do slot 8
 Produtor depositou item de valor 66 no slot 5
-Consumidor remove item 65 do slot 4
+Consumidor remove item 60 do slot 9
 Produtor depositou item de valor 67 no slot 6
-Consumidor remove item 66 do slot 5
+Consumidor remove item 61 do slot 0
 Produtor depositou item de valor 68 no slot 7
-Consumidor remove item 67 do slot 6
+Consumidor remove item 62 do slot 1
 Produtor depositou item de valor 69 no slot 8
-Consumidor remove item 68 do slot 7
+Consumidor remove item 63 do slot 2
 Produtor depositou item de valor 70 no slot 9
-Consumidor remove item 69 do slot 8
+Consumidor remove item 64 do slot 3
 Produtor depositou item de valor 71 no slot 0
-Consumidor remove item 70 do slot 9
+Consumidor remove item 65 do slot 4
 Produtor depositou item de valor 72 no slot 1
-Consumidor remove item 71 do slot 0
+Consumidor remove item 66 do slot 5
 Produtor depositou item de valor 73 no slot 2
-Consumidor remove item 72 do slot 1
+Consumidor remove item 67 do slot 6
 Produtor depositou item de valor 74 no slot 3
-Consumidor remove item 73 do slot 2
+Consumidor remove item 68 do slot 7
 Produtor depositou item de valor 75 no slot 4
-Consumidor remove item 74 do slot 3
+Consumidor remove item 69 do slot 8
 Produtor depositou item de valor 76 no slot 5
-Consumidor remove item 75 do slot 4
+Consumidor remove item 70 do slot 9
 Produtor depositou item de valor 77 no slot 6
-Consumidor remove item 76 do slot 5
+Consumidor remove item 71 do slot 0
 Produtor depositou item de valor 78 no slot 7
-Consumidor remove item 77 do slot 6
+Consumidor remove item 72 do slot 1
 Produtor depositou item de valor 79 no slot 8
-Consumidor remove item 78 do slot 7
+Consumidor remove item 73 do slot 2
 Produtor depositou item de valor 80 no slot 9
-Consumidor remove item 79 do slot 8
+Consumidor remove item 74 do slot 3
 Produtor depositou item de valor 81 no slot 0
-Consumidor remove item 80 do slot 9
+Consumidor remove item 75 do slot 4
 Produtor depositou item de valor 82 no slot 1
-Consumidor remove item 81 do slot 0
+Consumidor remove item 76 do slot 5
 Produtor depositou item de valor 83 no slot 2
-Consumidor remove item 82 do slot 1
+Consumidor remove item 77 do slot 6
 Produtor depositou item de valor 84 no slot 3
-Consumidor remove item 83 do slot 2
+Consumidor remove item 78 do slot 7
 Produtor depositou item de valor 85 no slot 4
-Consumidor remove item 84 do slot 3
+Consumidor remove item 79 do slot 8
 Produtor depositou item de valor 86 no slot 5
-Consumidor remove item 85 do slot 4
+Consumidor remove item 80 do slot 9
 Produtor depositou item de valor 87 no slot 6
-Consumidor remove item 86 do slot 5
+Consumidor remove item 81 do slot 0
 Produtor depositou item de valor 88 no slot 7
-Consumidor remove item 87 do slot 6
+Consumidor remove item 82 do slot 1
 Produtor depositou item de valor 89 no slot 8
-Consumidor remove item 88 do slot 7
+Consumidor remove item 83 do slot 2
 Produtor depositou item de valor 90 no slot 9
-Consumidor remove item 89 do slot 8
+Consumidor remove item 84 do slot 3
 Produtor depositou item de valor 91 no slot 0
-Consumidor remove item 90 do slot 9
+Consumidor remove item 85 do slot 4
 Produtor depositou item de valor 92 no slot 1
-Consumidor remove item 91 do slot 0
+Consumidor remove item 86 do slot 5
 Produtor depositou item de valor 93 no slot 2
-Consumidor remove item 92 do slot 1
+Consumidor remove item 87 do slot 6
 Produtor depositou item de valor 94 no slot 3
-Consumidor remove item 93 do slot 2
+Consumidor remove item 88 do slot 7
 Produtor depositou item de valor 95 no slot 4
-Consumidor remove item 94 do slot 3
+Consumidor remove item 89 do slot 8
 Produtor depositou item de valor 96 no slot 5
-Consumidor remove item 95 do slot 4
+Consumidor remove item 90 do slot 9
 Produtor depositou item de valor 97 no slot 6
-Consumidor remove item 96 do slot 5
+Consumidor remove item 91 do slot 0
 Produtor depositou item de valor 98 no slot 7
-Consumidor remove item 97 do slot 6
+Consumidor remove item 92 do slot 1
 Produtor depositou item de valor 99 no slot 8
-Consumidor remove item 98 do slot 7
+Consumidor remove item 93 do slot 2
 Produtor depositou item de valor 100 no slot 9
-Consumidor remove item 99 do slot 8
+Consumidor remove item 94 do slot 3
 Produtor depositou item de valor 101 no slot 0
-Consumidor remove item 100 do slot 9
+Consumidor remove item 95 do slot 4
 Produtor depositou item de valor 102 no slot 1
-Consumidor remove item 101 do slot 0
+Consumidor remove item 96 do slot 5
 Produtor depositou item de valor 103 no slot 2
-Consumidor remove item 102 do slot 1
+Consumidor remove item 97 do slot 6
 Produtor depositou item de valor 104 no slot 3
-Consumidor remove item 103 do slot 2
+Consumidor remove item 98 do slot 7
 Produtor depositou item de valor 105 no slot 4
-Consumidor remove item 104 do slot 3
+Consumidor remove item 99 do slot 8
 Produtor depositou item de valor 106 no slot 5
-Consumidor remove item 105 do slot 4
+Consumidor remove item 100 do slot 9
 Produtor depositou item de valor 107 no slot 6
-Consumidor remove item 106 do slot 5
+Consumidor remove item 101 do slot 0
 Produtor depositou item de valor 108 no slot 7
-Consumidor remove item 107 do slot 6
+Consumidor remove item 102 do slot 1
 Produtor depositou item de valor 109 no slot 8
-Consumidor remove item 108 do slot 7
+Consumidor remove item 103 do slot 2
 Produtor depositou item de valor 110 no slot 9
-Consumidor remove item 109 do slot 8
+Consumidor remove item 104 do slot 3
 Produtor depositou item de valor 111 no slot 0
-Consumidor remove item 110 do slot 9
+Consumidor remove item 105 do slot 4
 Produtor depositou item de valor 112 no slot 1
-Consumidor remove item 111 do slot 0
+Consumidor remove item 106 do slot 5
 Produtor depositou item de valor 113 no slot 2
-Consumidor remove item 112 do slot 1
+Consumidor remove item 107 do slot 6
 Produtor depositou item de valor 114 no slot 3
-Consumidor remove item 113 do slot 2
+Consumidor remove item 108 do slot 7
 Produtor depositou item de valor 115 no slot 4
-Consumidor remove item 114 do slot 3
+Consumidor remove item 109 do slot 8
 Produtor depositou item de valor 116 no slot 5
-Consumidor remove item 115 do slot 4
+Consumidor remove item 110 do slot 9
 Produtor depositou item de valor 117 no slot 6
-Consumidor remove item 116 do slot 5
+Consumidor remove item 111 do slot 0
 Produtor depositou item de valor 118 no slot 7
-Consumidor remove item 117 do slot 6
+Consumidor remove item 112 do slot 1
 Produtor depositou item de valor 119 no slot 8
-Consumidor remove item 118 do slot 7
+Consumidor remove item 113 do slot 2
 Produtor depositou item de valor 120 no slot 9
-Consumidor remove item 119 do slot 8
+Consumidor remove item 114 do slot 3
 Produtor depositou item de valor 121 no slot 0
-Consumidor remove item 120 do slot 9
+Consumidor remove item 115 do slot 4
 Produtor depositou item de valor 122 no slot 1
-Consumidor remove item 121 do slot 0
+Consumidor remove item 116 do slot 5
 Produtor depositou item de valor 123 no slot 2
-Consumidor remove item 122 do slot 1
+Consumidor remove item 117 do slot 6
 Produtor depositou item de valor 124 no slot 3
-Consumidor remove item 123 do slot 2
+Consumidor remove item 118 do slot 7
 Produtor depositou item de valor 125 no slot 4
-Consumidor remove item 124 do slot 3
+Consumidor remove item 119 do slot 8
 Produtor depositou item de valor 126 no slot 5
-Consumidor remove item 125 do slot 4
+Consumidor remove item 120 do slot 9
 Produtor depositou item de valor 127 no slot 6
-Consumidor remove item 126 do slot 5
+Consumidor remove item 121 do slot 0
 Produtor depositou item de valor 128 no slot 7
-Consumidor remove item 127 do slot 6
+Consumidor remove item 122 do slot 1
 Produtor depositou item de valor 129 no slot 8
-Consumidor remove item 128 do slot 7
+Consumidor remove item 123 do slot 2
 Produtor depositou item de valor 130 no slot 9
-Consumidor remove item 129 do slot 8
+Consumidor remove item 124 do slot 3
 Produtor depositou item de valor 131 no slot 0
-Consumidor remove item 130 do slot 9
+Consumidor remove item 125 do slot 4
 Produtor depositou item de valor 132 no slot 1
-Consumidor remove item 131 do slot 0
+Consumidor remove item 126 do slot 5
 Produtor depositou item de valor 133 no slot 2
-Consumidor remove item 132 do slot 1
+Consumidor remove item 127 do slot 6
 Produtor depositou item de valor 134 no slot 3
-Consumidor remove item 133 do slot 2
+Consumidor remove item 128 do slot 7
 Produtor depositou item de valor 135 no slot 4
-Consumidor remove item 134 do slot 3
+Consumidor remove item 129 do slot 8
 Produtor depositou item de valor 136 no slot 5
-Consumidor remove item 135 do slot 4
+Consumidor remove item 130 do slot 9
 Produtor depositou item de valor 137 no slot 6
-Consumidor remove item 136 do slot 5
+Consumidor remove item 131 do slot 0
 Produtor depositou item de valor 138 no slot 7
-Consumidor remove item 137 do slot 6
+Consumidor remove item 132 do slot 1
 Produtor depositou item de valor 139 no slot 8
-Consumidor remove item 138 do slot 7
+Consumidor remove item 133 do slot 2
 Produtor depositou item de valor 140 no slot 9
-Consumidor remove item 139 do slot 8
+Consumidor remove item 134 do slot 3
 Produtor depositou item de valor 141 no slot 0
-Consumidor remove item 140 do slot 9
+Consumidor remove item 135 do slot 4
 Produtor depositou item de valor 142 no slot 1
-Consumidor remove item 141 do slot 0
+Consumidor remove item 136 do slot 5
 Produtor depositou item de valor 143 no slot 2
-Consumidor remove item 142 do slot 1
+Consumidor remove item 137 do slot 6
 Produtor depositou item de valor 144 no slot 3
-Consumidor remove item 143 do slot 2
+Consumidor remove item 138 do slot 7
 Produtor depositou item de valor 145 no slot 4
-Consumidor remove item 144 do slot 3
+Consumidor remove item 139 do slot 8
 Produtor depositou item de valor 146 no slot 5
-Consumidor remove item 145 do slot 4
+Consumidor remove item 140 do slot 9
 Produtor depositou item de valor 147 no slot 6
-Consumidor remove item 146 do slot 5
+Consumidor remove item 141 do slot 0
 Produtor depositou item de valor 148 no slot 7
-Consumidor remove item 147 do slot 6
+Consumidor remove item 142 do slot 1
 Produtor depositou item de valor 149 no slot 8
-Consumidor remove item 148 do slot 7
+Consumidor remove item 143 do slot 2
 Produtor depositou item de valor 150 no slot 9
-Consumidor remove item 149 do slot 8
+Consumidor remove item 144 do slot 3
 Produtor depositou item de valor 151 no slot 0
-Consumidor remove item 150 do slot 9
+Consumidor remove item 145 do slot 4
 Produtor depositou item de valor 152 no slot 1
-Consumidor remove item 151 do slot 0
+Consumidor remove item 146 do slot 5
 Produtor depositou item de valor 153 no slot 2
-Consumidor remove item 152 do slot 1
+Consumidor remove item 147 do slot 6
 Produtor depositou item de valor 154 no slot 3
-Consumidor remove item 153 do slot 2
+Consumidor remove item 148 do slot 7
 Produtor depositou item de valor 155 no slot 4
-Consumidor remove item 154 do slot 3
+Consumidor remove item 149 do slot 8
 Produtor depositou item de valor 156 no slot 5
-Consumidor remove item 155 do slot 4
+Consumidor remove item 150 do slot 9
 Produtor depositou item de valor 157 no slot 6
-Consumidor remove item 156 do slot 5
+Consumidor remove item 151 do slot 0
 Produtor depositou item de valor 158 no slot 7
-Consumidor remove item 157 do slot 6
+Consumidor remove item 152 do slot 1
 Produtor depositou item de valor 159 no slot 8
-Consumidor remove item 158 do slot 7
+Consumidor remove item 153 do slot 2
 Produtor depositou item de valor 160 no slot 9
-Consumidor remove item 159 do slot 8
+Consumidor remove item 154 do slot 3
 Produtor depositou item de valor 161 no slot 0
-Consumidor remove item 160 do slot 9
+Consumidor remove item 155 do slot 4
 Produtor depositou item de valor 162 no slot 1
-Consumidor remove item 161 do slot 0
+Consumidor remove item 156 do slot 5
 Produtor depositou item de valor 163 no slot 2
-Consumidor remove item 162 do slot 1
+Consumidor remove item 157 do slot 6
 Produtor depositou item de valor 164 no slot 3
-Consumidor remove item 163 do slot 2
+Consumidor remove item 158 do slot 7
 Produtor depositou item de valor 165 no slot 4
-Consumidor remove item 164 do slot 3
+Consumidor remove item 159 do slot 8
 Produtor depositou item de valor 166 no slot 5
-Consumidor remove item 165 do slot 4
+Consumidor remove item 160 do slot 9
 Produtor depositou item de valor 167 no slot 6
-Consumidor remove item 166 do slot 5
+Consumidor remove item 161 do slot 0
 Produtor depositou item de valor 168 no slot 7
-Consumidor remove item 167 do slot 6
+Consumidor remove item 162 do slot 1
 Produtor depositou item de valor 169 no slot 8
-Consumidor remove item 168 do slot 7
+Consumidor remove item 163 do slot 2
 Produtor depositou item de valor 170 no slot 9
-Consumidor remove item 169 do slot 8
+Consumidor remove item 164 do slot 3
 Produtor depositou item de valor 171 no slot 0
-Consumidor remove item 170 do slot 9
+Consumidor remove item 165 do slot 4
 Produtor depositou item de valor 172 no slot 1
-Consumidor remove item 171 do slot 0
+Consumidor remove item 166 do slot 5
 Produtor depositou item de valor 173 no slot 2
-Consumidor remove item 172 do slot 1
+Consumidor remove item 167 do slot 6
 Produtor depositou item de valor 174 no slot 3
-Consumidor remove item 173 do slot 2
+Consumidor remove item 168 do slot 7
 Produtor depositou item de valor 175 no slot 4
-Consumidor remove item 174 do slot 3
+Consumidor remove item 169 do slot 8
 Produtor depositou item de valor 176 no slot 5
-Consumidor remove item 175 do slot 4
+Consumidor remove item 170 do slot 9
 Produtor depositou item de valor 177 no slot 6
-Consumidor remove item 176 do slot 5
+Consumidor remove item 171 do slot 0
 Produtor depositou item de valor 178 no slot 7
-Consumidor remove item 177 do slot 6
+Consumidor remove item 172 do slot 1
 Produtor depositou item de valor 179 no slot 8
-Consumidor remove item 178 do slot 7
+Consumidor remove item 173 do slot 2
 Produtor depositou item de valor 180 no slot 9
-Consumidor remove item 179 do slot 8
+Consumidor remove item 174 do slot 3
 Produtor depositou item de valor 181 no slot 0
-Consumidor remove item 180 do slot 9
+Consumidor remove item 175 do slot 4
 Produtor depositou item de valor 182 no slot 1
-Consumidor remove item 181 do slot 0
+Consumidor remove item 176 do slot 5
 Produtor depositou item de valor 183 no slot 2
-Consumidor remove item 182 do slot 1
+Consumidor remove item 177 do slot 6
 Produtor depositou item de valor 184 no slot 3
-Consumidor remove item 183 do slot 2
+Consumidor remove item 178 do slot 7
 Produtor depositou item de valor 185 no slot 4
-Consumidor remove item 184 do slot 3
+Consumidor remove item 179 do slot 8
 Produtor depositou item de valor 186 no slot 5
-Consumidor remove item 185 do slot 4
+Consumidor remove item 180 do slot 9
 Produtor depositou item de valor 187 no slot 6
-Consumidor remove item 186 do slot 5
+Consumidor remove item 181 do slot 0
 Produtor depositou item de valor 188 no slot 7
-Consumidor remove item 187 do slot 6
+Consumidor remove item 182 do slot 1
 Produtor depositou item de valor 189 no slot 8
-Consumidor remove item 188 do slot 7
+Consumidor remove item 183 do slot 2
 Produtor depositou item de valor 190 no slot 9
-Consumidor remove item 189 do slot 8
+Consumidor remove item 184 do slot 3
 Produtor depositou item de valor 191 no slot 0
-Consumidor remove item 190 do slot 9
+Consumidor remove item 185 do slot 4
 Produtor depositou item de valor 192 no slot 1
-Consumidor remove item 191 do slot 0
+Consumidor remove item 186 do slot 5
 Produtor depositou item de valor 193 no slot 2
-Consumidor remove item 192 do slot 1
+Consumidor remove item 187 do slot 6
 Produtor depositou item de valor 194 no slot 3
-Consumidor remove item 193 do slot 2
+Consumidor remove item 188 do slot 7
 Produtor depositou item de valor 195 no slot 4
-Consumidor remove item 194 do slot 3
+Consumidor remove item 189 do slot 8
 Produtor depositou item de valor 196 no slot 5
-Consumidor remove item 195 do slot 4
+Consumidor remove item 190 do slot 9
 Produtor depositou item de valor 197 no slot 6
-Consumidor remove item 196 do slot 5
+Consumidor remove item 191 do slot 0
 Produtor depositou item de valor 198 no slot 7
-Consumidor remove item 197 do slot 6
+Consumidor remove item 192 do slot 1
 Produtor depositou item de valor 199 no slot 8
-Consumidor remove item 198 do slot 7
+Consumidor remove item 193 do slot 2
 Produtor depositou item de valor 200 no slot 9
+Consumidor remove item 194 do slot 3
+Consumidor remove item 195 do slot 4
+Consumidor remove item 196 do slot 5
+Consumidor remove item 197 do slot 6
+Consumidor remove item 198 do slot 7
 Consumidor remove item 199 do slot 8
 Consumidor remove item 200 do slot 9
